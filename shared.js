@@ -9,7 +9,7 @@ function calculateVals(val1, val2) {
 }
 
 function sendToMobile(data) {
-    window.ReactNativeWebView.postMessage(JSON.stringify(data));
+    window.ReactNativeWebView.postMessage(data);
   }
 
   // For Web
