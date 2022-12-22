@@ -15,3 +15,8 @@ function testFunc() {
 function sendToWeb(data) {
     window.postMessage(JSON.stringify(data));
   }
+
+
+window.testFunc2 = () => {
+    return "Called test function"
+}
