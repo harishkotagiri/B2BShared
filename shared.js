@@ -1,16 +1,18 @@
 function getFullName(fname, lname) {
     let name = `${fname} ${lname}`;
-    sendToMobile(name);
+    let data = {type: 'Response from External JS:', name};
+    sendToMobile(data);
 }
 
 function calculateVals(val1, val2) {
     let val = val1+val2;
-    sendToMobile(val);
+    let data = {type: 'Response from External JS:', val};
+    sendToMobile(data);
 }
 
 function sendToMobile(data) {
-    window.ReactNativeWebView.postMessage(data);
-  }
+  window.ReactNativeWebView.postMessage(JSON.stringify(data));
+}
 
   // For Web
 
