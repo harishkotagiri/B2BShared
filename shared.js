@@ -1,15 +1,14 @@
-function getFullName(fname, lname) {
-    let name = `${fname} ${lname}`;
-    let data = {type: 'Response from External JS:', name};
-    sendToMobile(data);
+function calculateTotal(input1, input2) {
+  let result = input1 + input2;
+  let data = {type: 'calculateTotal', result};
+  sendData(data);
+}
+function calculateVat(input1, input2) {
+  let result = input1 + input2 + 10;
+  let data = {type: 'calculateVat', result};
+  sendData(data);
 }
 
-function calculateVals(val1, val2) {
-    let val = val1+val2;
-    let data = {type: 'Response from External JS:', val};
-    sendToMobile(data);
-}
-
-function sendToMobile(data) {
+function sendData(data) {
   window.ReactNativeWebView.postMessage(JSON.stringify(data));
 }
