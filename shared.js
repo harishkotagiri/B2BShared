@@ -13,13 +13,3 @@ function calculateVals(val1, val2) {
 function sendToMobile(data) {
   window.ReactNativeWebView.postMessage(JSON.stringify(data));
 }
-
-  // For Web
-
-window.getFullName = (fname, lname) => {
-    return `${fname} ${lname}`;
-}
-
-window.calculateVals = (val1, val2) => {
-    return val1-val2;
-}
