@@ -1,10 +1,10 @@
-function getFullNameM(fname, lname) {
-    let name = `${fname} ${lname}`;
-    let data = {type: 'Response from External JS:', name};
+function calculateTaxM(val1, val2) {
+    let val = val1+val2+20;    
+    let data = {type: 'Response from External JS:', val};
     sendToMobile(data);
 }
 
-function calculateValsM(val1, val2) {
+function calculateTotalM(val1, val2) {
     let val = val1+val2;
     let data = {type: 'Response from External JS:', val};
     sendToMobile(data);
@@ -16,10 +16,10 @@ function sendToMobile(data) {
 
  // For Web
 
-window.getFullName = (fname, lname) => {
-    return `${fname} ${lname}`;
+window.calculateTax = (val1, val2) => {
+    return  val1+val2+20;
 }
 
 window.calculateVals = (val1, val2) => {
-    return val1-val2;
+    return val1+val2;
 }
