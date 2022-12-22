@@ -1,14 +1,25 @@
-function calculateTotal(input1, input2) {
-  let result = input1 + input2;
-  let data = {type: 'calculateTotal', result};
-  sendData(data);
-}
-function calculateVat(input1, input2) {
-  let result = input1 + input2 + 10;
-  let data = {type: 'calculateVat', result};
-  sendData(data);
+function getFullNameM(fname, lname) {
+    let name = `${fname} ${lname}`;
+    let data = {type: 'Response from External JS:', name};
+    sendToMobile(data);
 }
 
-function sendData(data) {
+function calculateValsM(val1, val2) {
+    let val = val1+val2;
+    let data = {type: 'Response from External JS:', val};
+    sendToMobile(data);
+}
+
+function sendToMobile(data) {
   window.ReactNativeWebView.postMessage(JSON.stringify(data));
+}
+
+ // For Web
+
+window.getFullName = (fname, lname) => {
+    return `${fname} ${lname}`;
+}
+
+window.calculateVals = (val1, val2) => {
+    return val1-val2;
 }
