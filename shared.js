@@ -1,22 +1,23 @@
 function getFullName(fname, lname) {
     let name = `${fname} ${lname}`;
-    sendToWeb(name);
+    sendToMobile(name);
 }
 
 function calculateVals(val1, val2) {
     let val = val1+val2;
-    sendToWeb(val);
+    sendToMobile(val);
 }
 
-function testFunc() {
-    sendToWeb("Called test function");
-}
-
-function sendToWeb(data) {
-    window.postMessage(JSON.stringify(data));
+function sendToMobile(data) {
+    window.ReactNativeWebView.postMessage(JSON.stringify(data));
   }
 
+  // For Web
 
-window.testFunc2 = () => {
-    return "Called test function2"
+window.getFullName = (fname, lname) => {
+    return `${fname} ${lname}`;
+}
+
+window.calculateVals = (val1, val2) => {
+    return val1+val2;
 }
