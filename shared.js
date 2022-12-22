@@ -18,5 +18,5 @@ function sendToWeb(data) {
 
 
 window.testFunc2 = () => {
-    return "Called test function"
+    return "Called test function2"
 }
