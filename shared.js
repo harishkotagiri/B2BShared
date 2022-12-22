@@ -6,6 +6,6 @@ window.calculateVals = (val1, val2) => {
     return val1+val2;
 }
 
-window.testFunc = () => {
+const testFunc = () => {
     return "Called test function"
 }
