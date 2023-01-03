@@ -1,10 +1,10 @@
-function tax(val1, val2) {
+function taxAP(val1, val2) {
     let val = val1 + val2 + 20;    
     let data = {type: 'Response from External JS:', val};
     sendToMobile(data);
 }
 
-function total(val1, val2) {
+function totalAP(val1, val2) {
     let val = val1 + val2;
     let data = {type: 'Response from External JS:', val};
     sendToMobile(data);
