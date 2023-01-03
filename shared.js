@@ -1,11 +1,23 @@
-function calculateTaxM(val1, val2) {
+function taxAP(val1, val2) {
     let val = val1 + val2 + 20;    
     let data = {type: 'Response from External JS:', val};
     sendToMobile(data);
 }
 
-function calculateTotalM(val1, val2) {
+function totalAP(val1, val2) {
     let val = val1 + val2;
+    let data = {type: 'Response from External JS:', val};
+    sendToMobile(data);
+}
+
+function taxTN(val1, val2) {
+    let val = val1 + val2 + 10;    
+    let data = {type: 'Response from External JS:', val};
+    sendToMobile(data);
+}
+
+function totalTN(val1, val2) {
+    let val = val1 + val2 + 5;
     let data = {type: 'Response from External JS:', val};
     sendToMobile(data);
 }
